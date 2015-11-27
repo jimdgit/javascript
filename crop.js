@@ -1,10 +1,5 @@
-getHeight
 
-function crop(im1,im2) {
-    var h =(im1.getHeight() > im2.getHeight() )?  im2.getHeight() : im1.getHeight() ;
-    
-}
-http://www.dukelearntoprogram.com/course1/doc/index.php#simpleimage
+// http://www.dukelearntoprogram.com/course1/doc/index.php#simpleimage
 function  crop(im1,im2) {
     var h =(im1.getHeight() > im2.getHeight() )?  im2.getHeight() : im1.getHeight() ;
     var w = (im1.getWidth() > im2.getWidth()) ? im2.getWidth() :im2.getWidth() ;
@@ -20,6 +15,7 @@ function  crop(im1,im2) {
     //print(nm1);
     return nm1;
 }
+// test code
 var start = new SimpleImage("usain.jpg");
 var hide = new SimpleImage("astrachan.jpg");
 print(start);
