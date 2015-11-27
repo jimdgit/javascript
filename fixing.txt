@@ -28,9 +28,9 @@ function shift(im){
   }
   return nim;
 }
-function extract(num)
+function decode(num)
 {
-	return (Math.floor(num*16) & 0xf0);
+	return (Math.floor(num<< 4) & 0xf0 );
 }
 function unshift(im){
   var nim = new SimpleImage(im.getWidth(), 
@@ -39,9 +39,9 @@ function unshift(im){
     var x = px.getX();
     var y = px.getY();
     var npx = nim.getPixel(x,y);
-    npx.setRed(extract(px.getRed()) );
-    npx.setGreen(extract(px.getGreen()) );
-    npx.setBlue(extract(px.getBlue()));
+    npx.setRed(decode(px.getRed()) );
+    npx.setGreen(decode(px.getGreen()) );
+    npx.setBlue(decode(px.getBlue()));
   }
   return nim;
 }
@@ -107,6 +107,7 @@ showPixel(final);
 print("decoded");
 
 decoded = unshift(final);
+showPixel(decoded);
 print(decoded);
 
 

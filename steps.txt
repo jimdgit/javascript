@@ -1,0 +1,2 @@
+1. Work an small instance of the problem by hand.
+2. Write down steps.
